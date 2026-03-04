@@ -1,0 +1,23 @@
+{
+  "name": "nova-proxy",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" }
+}
+```
+
+**Step 2 — Push to GitHub**
+- Go to **github.com**, create a **New Repository**, name it `nova-proxy`
+- Upload all the files
+
+**Step 3 — Deploy on Render**
+- Go to **render.com** → New → Web Service
+- Connect your `nova-proxy` GitHub repo
+- Build command: `npm install`
+- Start command: `node server.js`
+- Click **Deploy**
+
+**Step 4 — Use it in NovaOS**
+Once deployed you get a URL like `https://nova-proxy.onrender.com`. To load YouTube, paste:
+```
+https://nova-proxy.onrender.com/proxy?url=https://youtube.com
